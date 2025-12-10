@@ -1,0 +1,38 @@
+export const mealsData = [
+  {
+    id: '1',
+    title: 'Breakfast',
+    image: require('../../../assets/fitness_app/breakfast.png'),
+    meals: ['Bread', 'Peanut butter', 'Apple'],
+    kacl: 525,
+    startColor: '#FA7D82',
+    endColor: '#FFB295',
+  },
+  {
+    id: '2',
+    title: 'Lunch',
+    image: require('../../../assets/fitness_app/lunch.png'),
+    meals: ['Salmon', 'Mixed veggies', 'Avocado'],
+    kacl: 602,
+    startColor: '#738AE6',
+    endColor: '#5C5EDD',
+  },
+  {
+    id: '3',
+    title: 'Snack',
+    image: require('../../../assets/fitness_app/snack.png'),
+    meals: ['Recommend:', '800 kcal'],
+    kacl: 0,
+    startColor: '#FE95B6',
+    endColor: '#FF5287',
+  },
+  {
+    id: '4',
+    title: 'Dinner',
+    image: require('../../../assets/fitness_app/dinner.png'),
+    meals: ['Recommend:', '703 kcal'],
+    kacl: 0,
+    startColor: '#6F72CA',
+    endColor: '#1E1466',
+  },
+];
