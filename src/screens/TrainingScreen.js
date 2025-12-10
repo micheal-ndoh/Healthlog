@@ -1,37 +1,31 @@
-import React from 'react';
-import { Animated, FlatList, StyleSheet, View } from 'react-native';
-import { COLORS } from '../(constants)/theme';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { COLORS, FONT_SIZES, FONT_WEIGHTS } from '../(constants)/theme';
 import AreaListView from '../components/AreaListView';
-import TitleView from '../components/TitleView';
-import TrainingAnimatedAppBar from '../components/TrainingAnimatedAppBar';
+import RunningView from '../components/RunningView';
+import TopBar from '../components/TopBar';
 import WorkoutView from '../components/WorkoutView';
 
 const TrainingScreen = () => {
-  const scrollY = new Animated.Value(0);
-
   return (
     <View style={styles.container}>
-      <FlatList
-        style={styles.scrollView}
-        onScroll={Animated.event(
-          [{ nativeEvent: { contentOffset: { y: scrollY } } }],
-          { useNativeDriver: false }
-        )}
-        scrollEventThrottle={16}
-        ListHeaderComponent={
-          <>
-            <View style={{ height: 88 }} />{/* Add padding for app bar */}
-            <TitleView title="Your Program" subtitle="Details" />
-            <WorkoutView />
-            <TitleView title="Area of Focus" subtitle="more" />
-          </>
-        }
-        data={[]}
-        renderItem={null}
-        keyExtractor={(item, index) => index.toString()}
-        ListFooterComponent={<AreaListView />}
-      />
-      <TrainingAnimatedAppBar scrollY={scrollY} />
+      <TopBar />
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.header}>
+          <Text style={styles.title}>Your Program</Text>
+          <TouchableOpacity>
+            <Text style={styles.details}>Details</Text>
+          </TouchableOpacity>
+        </View>
+        <WorkoutView />
+        <RunningView />
+        <View style={styles.header}>
+          <Text style={styles.title}>Area of Focus</Text>
+          <TouchableOpacity>
+            <Text style={styles.details}>more</Text>
+          </TouchableOpacity>
+        </View>
+        <AreaListView />
+      </ScrollView>
     </View>
   );
 };
@@ -43,6 +37,22 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     flex: 1,
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginHorizontal: 16,
+    marginTop: 16,
+  },
+  title: {
+    fontSize: FONT_SIZES.h6,
+    fontWeight: FONT_WEIGHTS.bold,
+  },
+  details: {
+    fontSize: FONT_SIZES.body2,
+    color: COLORS.primary,
+    fontWeight: FONT_WEIGHTS.bold,
   },
 });
 

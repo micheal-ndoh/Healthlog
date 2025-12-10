@@ -1,4 +1,4 @@
-import { FlatList, Image, StyleSheet, Text, View } from 'react-native';
+import { FlatList, Image, StyleSheet, View } from 'react-native';
 import { areaData } from '../(constants)/areaData';
 import { COLORS, FONT_SIZES, FONT_WEIGHTS } from '../(constants)/theme';
 
@@ -11,7 +11,6 @@ const AreaListView = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Workout Areas</Text>
       <FlatList
         data={areaData}
         renderItem={renderItem}

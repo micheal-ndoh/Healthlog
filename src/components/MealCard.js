@@ -1,6 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLORS, FONT_SIZES, FONT_WEIGHTS } from '../(constants)/theme';
 
@@ -35,39 +34,39 @@ const MealCard = ({ meal, onAddMeal }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: 130,
+    width: 150,
+    height: 200,
     marginHorizontal: 8,
   },
   gradient: {
     flex: 1,
-    borderRadius: 8,
+    borderRadius: 16,
     padding: 16,
+    justifyContent: 'space-between',
   },
   image: {
-    width: 80,
-    height: 80,
-    position: 'absolute',
-    top: -10,
-    left: -10,
+    width: 60,
+    height: 60,
+    alignSelf: 'center',
   },
   title: {
     fontSize: FONT_SIZES.title,
     fontWeight: FONT_WEIGHTS.bold,
     color: COLORS.white,
-    marginTop: 60,
+    marginTop: 8,
   },
   meals: {
     fontSize: FONT_SIZES.caption,
     color: COLORS.white,
-    marginTop: 8,
+    marginTop: 4,
   },
   kaclContainer: {
     flexDirection: 'row',
-    alignItems: 'flex-end',
-    marginTop: 'auto',
+    alignItems: 'baseline',
+    marginTop: 8,
   },
   kaclValue: {
-    fontSize: FONT_SIZES.headline,
+    fontSize: FONT_SIZES.h5,
     fontWeight: FONT_WEIGHTS.bold,
     color: COLORS.white,
   },
@@ -75,20 +74,13 @@ const styles = StyleSheet.create({
     fontSize: FONT_SIZES.caption,
     color: COLORS.white,
     marginLeft: 4,
-    marginBottom: 4,
   },
   addButton: {
     backgroundColor: COLORS.white,
-    borderRadius: 16,
-    padding: 4,
-    shadowColor: COLORS.nearlyBlack,
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 4.65,
-    elevation: 8,
+    borderRadius: 20,
+    padding: 8,
+    alignSelf: 'flex-end',
+    marginTop: 8,
   },
 });
 

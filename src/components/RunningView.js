@@ -1,12 +1,12 @@
-import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import icons from '../(constants)/icons';
 import { COLORS, FONT_SIZES, FONT_WEIGHTS } from '../(constants)/theme';
 
 const RunningView = () => {
   return (
     <View style={styles.container}>
-      <Image source={require('../../../assets/fitness_app/back.png')} style={styles.backgroundImage} />
-      <Image source={require('../../../assets/fitness_app/runner.png')} style={styles.runnerImage} />
+      <Image source={icons.back} style={styles.backgroundImage} />
+      <Image source={icons.runner} style={styles.runnerImage} />
       <View style={styles.textContainer}>
         <Text style={styles.title}>You're doing great!</Text>
         <Text style={styles.subtitle}>Keep it up and stick to your plan!</Text>

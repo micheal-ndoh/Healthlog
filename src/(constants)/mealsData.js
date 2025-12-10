@@ -1,8 +1,10 @@
+import icons from './icons';
+
 export const mealsData = [
   {
     id: '1',
     title: 'Breakfast',
-    image: require('../../../assets/fitness_app/breakfast.png'),
+    image: icons.breakfast,
     meals: ['Bread', 'Peanut butter', 'Apple'],
     kacl: 525,
     startColor: '#FA7D82',
@@ -11,7 +13,7 @@ export const mealsData = [
   {
     id: '2',
     title: 'Lunch',
-    image: require('../../../assets/fitness_app/lunch.png'),
+    image: icons.lunch,
     meals: ['Salmon', 'Mixed veggies', 'Avocado'],
     kacl: 602,
     startColor: '#738AE6',
@@ -20,7 +22,7 @@ export const mealsData = [
   {
     id: '3',
     title: 'Snack',
-    image: require('../../../assets/fitness_app/snack.png'),
+    image: icons.snack,
     meals: ['Recommend:', '800 kcal'],
     kacl: 0,
     startColor: '#FE95B6',
@@ -29,7 +31,7 @@ export const mealsData = [
   {
     id: '4',
     title: 'Dinner',
-    image: require('../../../assets/fitness_app/dinner.png'),
+    image: icons.dinner,
     meals: ['Recommend:', '703 kcal'],
     kacl: 0,
     startColor: '#6F72CA',

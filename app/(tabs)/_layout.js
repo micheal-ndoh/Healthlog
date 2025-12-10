@@ -1,5 +1,7 @@
+import { Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 import { Image, View } from 'react-native';
+import icons from '../../src/(constants)/icons';
 import { COLORS } from '../../src/(constants)/theme';
 
 const TabsLayout = () => {
@@ -14,22 +16,22 @@ const TabsLayout = () => {
         },
       }}>
       <Tabs.Screen
-        name="my-diary"
+        name="index"
         options={{
           tabBarIcon: ({ focused }) => (
             <Image
-              source={focused ? require('../../assets/fitness_app/tab_1s.png') : require('../../assets/fitness_app/tab_1.png')}
+              source={focused ? icons.tab_1s : icons.tab_1}
               style={{ width: 24, height: 24 }}
             />
           ),
         }}
       />
       <Tabs.Screen
-        name="discover"
+        name="explore"
         options={{
           tabBarIcon: ({ focused }) => (
             <Image
-              source={focused ? require('../../assets/fitness_app/tab_2s.png') : require('../../assets/fitness_app/tab_2.png')}
+              source={focused ? icons.tab_2s : icons.tab_2}
               style={{ width: 24, height: 24 }}
             />
           ),
@@ -49,29 +51,29 @@ const TabsLayout = () => {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Image source={require('../../assets/fitness_app/plus.png')} style={{ width: 30, height: 30 }} />
+                <Ionicons name="add" size={32} color={COLORS.white} />
               </View>
             </View>
           ),
         }}
       />
       <Tabs.Screen
-        name="bottom_tab_3"
+        name="my-diary"
         options={{
           tabBarIcon: ({ focused }) => (
             <Image
-              source={focused ? require('../../assets/fitness_app/tab_3s.png') : require('../../assets/fitness_app/tab_3.png')}
+              source={focused ? icons.tab_3s : icons.tab_3}
               style={{ width: 24, height: 24 }}
             />
           ),
         }}
       />
       <Tabs.Screen
-        name="bottom_tab_4"
+        name="training"
         options={{
           tabBarIcon: ({ focused }) => (
             <Image
-              source={focused ? require('../../assets/fitness_app/tab_4s.png') : require('../../assets/fitness_app/tab_4.png')}
+              source={focused ? icons.tab_4s : icons.tab_4}
               style={{ width: 24, height: 24 }}
             />
           ),
